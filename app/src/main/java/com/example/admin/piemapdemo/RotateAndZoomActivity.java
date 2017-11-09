@@ -199,9 +199,6 @@ public class RotateAndZoomActivity extends AppCompatActivity implements View.OnC
             mBasicOpMapView.destroyMapWindow();
             mBasicOpMapView = null;
         }
-
-        super.onDestroy();
-
     }
 
 

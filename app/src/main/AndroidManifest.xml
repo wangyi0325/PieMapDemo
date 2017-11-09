@@ -31,7 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".BasicMapActivity" />
-        <activity android:name=".RotateAndZoomActivity"></activity>
+        <activity android:name=".RotateAndZoomActivity" />
+        <activity android:name=".MapSwitchActivity"></activity>
     </application>
 
 </manifest>

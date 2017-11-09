@@ -285,7 +285,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(this, "第三个", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.but_4:
-                Toast.makeText(this, "第四个", Toast.LENGTH_SHORT).show();
+                Intent intent4 = new Intent(this, MapSwitchActivity.class);
+                startActivity(intent4);
                 break;
         }
     }
