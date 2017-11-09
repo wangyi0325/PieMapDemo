@@ -21,14 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
     private MapViews map_views;//获取地图组件
     private MapView mapView;
-    private String mapPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initGisNative();
         setContentView(R.layout.activity_main);
-        openWorkspace();
+
+
         //初始化控件
         initview();
         //设置数据
@@ -36,18 +35,6 @@ public class MainActivity extends AppCompatActivity {
         //打开地图
         openMap("googlemap");
 
-    }
-
-
-    /**
-     * 初始地图所需资源的路径
-     * 确保地图资源已存在
-     * 注意：初始化一定要在初始化MapView之前
-     */
-    private void initGisNative() {
-        // 路径确保存在，确保地图资源存在
-        mapPath = Path.PATH_PIE_MAP_RES_DEFAULT;
-        GisNative.init(this, mapPath);
     }
 
 
@@ -87,23 +74,6 @@ public class MainActivity extends AppCompatActivity {
         mapView.viewEntire();
         mapView.setMapGestureController(new MapGestureController());
 
-    }
-
-
-
-    private void openWorkspace() {
-
-        if (PieMapApiApplication.mWorkspace != null) {
-            return;
-        }
-        PieMapApiApplication.mWorkspace = new Workspace();
-        boolean isOpen = PieMapApiApplication.mWorkspace.open(Path.PATH_PIE_MAP_RES_DEFAULT
-                + "workspace.xml");
-
-        if (!isOpen) {
-            Toast.makeText(this, "打开工作区间失败", Toast.LENGTH_SHORT).show();
-            finish();
-        }
     }
 
 

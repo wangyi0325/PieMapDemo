@@ -47,7 +47,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //initGisNative();
+        initGisNative();
         setContentView(R.layout.activity_home_page);
 
 
@@ -60,7 +60,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
             new MapResourceAsyncTask().execute();
         }
 
-        //openWorkspace();//打开工作区间
+        openWorkspace();//打开工作区间
 
     }
 
@@ -274,7 +274,6 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.but_1:
-                Toast.makeText(this, "第一个", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
