@@ -6,18 +6,15 @@ import android.util.DisplayMetrics;
 import android.widget.Toast;
 
 
-import com.example.admin.piemapdemo.constats.Path;
 
 import pie.core.DimensionMode;
-import pie.core.GisNative;
 import pie.core.MapView;
-import pie.core.Workspace;
 import pie.map.MapViews;
 import pie.map.gesture.MapGestureController;
 /**
- * 地图打打开与关闭功能
+ * 地图打打开与关闭基本功能
  */
-public class MainActivity extends AppCompatActivity {
+public class BasicMapActivity extends AppCompatActivity {
 
     private MapViews map_views;//获取地图组件
     private MapView mapView;

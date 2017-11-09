@@ -274,11 +274,12 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.but_1:
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, BasicMapActivity.class);
                 startActivity(intent);
                 break;
             case R.id.but_2:
-                Toast.makeText(this, "第二个", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(this, RotateAndZoomActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.but_3:
                 Toast.makeText(this, "第三个", Toast.LENGTH_SHORT).show();
