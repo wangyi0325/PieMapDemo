@@ -32,7 +32,8 @@
         </activity>
         <activity android:name=".BasicMapActivity" />
         <activity android:name=".RotateAndZoomActivity" />
-        <activity android:name=".MapSwitchActivity"></activity>
+        <activity android:name=".MapSwitchActivity" />
+        <activity android:name=".LocationActivity"></activity>
     </application>
 
 </manifest>

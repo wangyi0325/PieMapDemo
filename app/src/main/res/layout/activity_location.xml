@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+
+
+    <pie.map.MapViews
+        android:id="@+id/mvs_pie_dem_land_analysis_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" >
+    </pie.map.MapViews>
+
+    <ImageButton
+        android:id="@+id/ib_pie_dem_analyze"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_corner_btn_black"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ib_pie_op_dem_data"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ib_pie_dem_analyze"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_corner_btn_black"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_pie_dem_clear_geometry"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ib_pie_op_dem_data"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_corner_btn_black"
+         />
+
+    <LinearLayout
+        android:id="@+id/ll_pie_unuses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp" >
+
+            <ImageButton
+                android:id="@+id/ib_pie_zoom_in"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="6dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_zoom_in_selector" />
+
+            <ImageButton
+                android:id="@+id/ib_pie_zoom_out"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ib_pie_zoom_in"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="6dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_zoom_out_selector" />
+
+            <ImageButton
+                android:id="@+id/ib_pie_location_to_dem"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/ib_pie_zoom_out"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/pie_ic_location"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

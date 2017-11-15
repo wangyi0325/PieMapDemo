@@ -37,4 +37,5 @@ dependencies {
     implementation files('libs/pie.jar')
     implementation files('libs/pieanims.jar')
     implementation files('libs/piegesture.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
 }

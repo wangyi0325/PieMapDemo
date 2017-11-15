@@ -37,10 +37,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     private String mapResourcePath;
     private SharedPreferences mPreferences;
     private static final String MAP_RESOURCE_NAME = "piesdk.zip";
-    private Button but1;
-    private Button but2;
-    private Button but3;
-    private Button but4;
+    private Button but_open_close;//打开关闭
+    private Button but_zoom_out;//缩小放大
+    private Button but_switch;//二三维切换
+    private Button but_location;//定位
 
 
     @Override
@@ -78,14 +78,15 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
 
     private void initView() {
-        but1 = (Button) findViewById(R.id.but_1);
-        but2 = (Button) findViewById(R.id.but_2);
-        but3 = (Button) findViewById(R.id.but_3);
-        but4 = (Button) findViewById(R.id.but_4);
-        but1.setOnClickListener(this);
-        but2.setOnClickListener(this);
-        but3.setOnClickListener(this);
-        but4.setOnClickListener(this);
+        but_open_close = (Button) findViewById(R.id.but_open_close);
+        but_zoom_out = (Button) findViewById(R.id.but_zoom_out);
+        but_location = (Button) findViewById(R.id.but_location);
+        but_switch = (Button) findViewById(R.id.but_switch);
+        but_location = (Button) findViewById(R.id.but_location);
+        but_open_close.setOnClickListener(this);
+        but_zoom_out.setOnClickListener(this);
+        but_location.setOnClickListener(this);
+        but_switch.setOnClickListener(this);
 
     }
 
@@ -273,18 +274,19 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.but_1:
+            case R.id.but_open_close:
                 Intent intent = new Intent(this, BasicMapActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.but_2:
+            case R.id.but_zoom_out:
                 Intent intent2 = new Intent(this, RotateAndZoomActivity.class);
                 startActivity(intent2);
                 break;
-            case R.id.but_3:
-                Toast.makeText(this, "第三个", Toast.LENGTH_SHORT).show();
+            case R.id.but_location:
+                Intent intent3 = new Intent(this, LocationActivity.class);
+                startActivity(intent3);
                 break;
-            case R.id.but_4:
+            case R.id.but_switch:
                 Intent intent4 = new Intent(this, MapSwitchActivity.class);
                 startActivity(intent4);
                 break;

@@ -9,28 +9,28 @@
 
 
     <Button
-        android:id="@+id/but_1"
+        android:id="@+id/but_open_close"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="打开关闭地图"
         />
     <Button
-        android:id="@+id/but_2"
+        android:id="@+id/but_zoom_out"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="放大缩小移动"
         />
     <Button
-        android:id="@+id/but_3"
+        android:id="@+id/but_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="定位"
         />
     <Button
-        android:id="@+id/but_4"
+        android:id="@+id/but_switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
